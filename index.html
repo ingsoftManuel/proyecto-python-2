@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+        }
+        .filter-container input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sensor Data Viewer</h1>
+
+    <!-- Filters -->
+    <div class="filter-container">
+        <label for="filter-id">Sensor ID:</label>
+        <input type="text" id="filter-id" placeholder="Enter sensor ID">
+
+        <label for="filter-date">Date:</label>
+        <input type="date" id="filter-date">
+
+        <label for="filter-time">Time:</label>
+        <input type="time" id="filter-time">
+
+        <button onclick="applyFilters()">Apply Filters</button>
+        <button onclick="resetFilters()">Reset Filters</button>
+    </div>
+
+    <!-- Data Table -->
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Sensor ID</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
